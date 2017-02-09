@@ -1,10 +1,18 @@
 //My own .map() function, takes in two arguments, an array and a callback function
 function myMap(arr, callback) {
   var retArray = [];
-  for (var i = 0; i < arr.length; i++) {
-    var itemInArr = arr[i];
-    retArray.push(callback(itemInArr));
-  }
+
+  //TRADITIONAL FOR LOOP
+  // for (var i = 0; i < arr.length; i++) {
+  //   var itemInArr = arr[i];
+  //   retArray.push(callback(itemInArr));
+  // }
+
+  //FOR EACH VERSION
+  arr.forEach(function(arrElem) {
+    retArray.push(callback(arrElem));
+  })
+
   return retArray;
 }
 
